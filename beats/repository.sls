@@ -15,6 +15,7 @@ add_elastic_repository:
         - file: /etc/apt/sources.list.d/elastic.list
         - gpgcheck: 1
         - key_url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+        - clean_file: true
         - require:
             - pkg: apt-transport-https
 
@@ -28,6 +29,7 @@ add_elastic_repository:
         - gpgkey: https://artifacts.elastic.co/GPG-KEY-elasticsearch
         - gpgcheck: 1
         - disabled: False
+        - clean_file: true
 
 {% endif %}
 
