@@ -24,6 +24,7 @@ add_elastic_repository:
 add_elastic_repository:
     pkgrepo.{{ repo_state }}:
         - name: elastic
+        - file: /etc/yum.repos.d/elastic.repo
         - humanname: "Elastic repository for {{ version }}.x packages"
         - baseurl: https://artifacts.elastic.co/packages/{{ version }}.x/yum
         - gpgkey: https://artifacts.elastic.co/GPG-KEY-elasticsearch
